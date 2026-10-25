@@ -41,11 +41,11 @@ button { font: inherit; cursor: pointer; }
 .logo {
   display: block;
   width: 100%;
-  max-width: 340px;
+  max-width: 200px;
   height: auto;
   margin: 0 auto;
 }
-.logo-pequena { max-width: 190px; margin-bottom: 8px; }
+.logo-pequena { max-width: 140px; margin-bottom: 6px; }
 
 /* ---------- Tela de temas ---------- */
 
