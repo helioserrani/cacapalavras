@@ -60,9 +60,10 @@ button { font: inherit; cursor: pointer; }
 .topo h1 {
   margin: 6px 0 0;
   font-family: var(--fonte-titulo);
-  font-weight: 700;
+  font-weight: 900;
   font-size: clamp(1.8rem, 8vw, 2.6rem);
   color: var(--roxo);
+  -webkit-text-stroke: .6px var(--roxo);
 }
 .topo p { margin: 4px 0 0; color: var(--suave); font-size: 1.1rem; }
 
