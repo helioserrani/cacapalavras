@@ -49,6 +49,16 @@ button { font: inherit; cursor: pointer; }
 
 /* ---------- Tela de temas ---------- */
 
+.ilustracao {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 12px auto 6px;
+  border-radius: 22px;
+  border: 2px solid var(--dourado-claro);
+  box-shadow: 0 12px 30px rgba(74, 31, 125, .22);
+}
+
 .topo { text-align: center; padding: 4px 0 8px; }
 .selo {
   display: flex; align-items: center; justify-content: center; gap: 10px;
