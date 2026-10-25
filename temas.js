@@ -3,7 +3,8 @@
 //  Para criar um tema novo, copie um bloco { ... } abaixo,
 //  troque o nome, o emoji, a cor e a lista de palavras.
 //  Pode escrever as palavras com acento: o jogo cuida disso.
-//  Dica: use palavras de até 10 letras.
+//  Dica: use palavras de até 10 letras. Quanto mais palavras
+//  na lista, mais o jogo varia a cada partida.
 // =============================================================
 
 const TEMAS = [
@@ -16,7 +17,11 @@ const TEMAS = [
     palavras: [
       "Princesa", "Castelo", "Coroa", "Vestido", "Fada", "Príncipe",
       "Varinha", "Sapatinho", "Carruagem", "Espelho", "Baile", "Unicórnio",
-      "Magia", "Tiara", "Joia", "Dragão", "Reino", "Torre", "Laço", "Rainha"
+      "Magia", "Tiara", "Joia", "Dragão", "Reino", "Torre", "Laço", "Rainha",
+      "Rei", "Trono", "Cetro", "Bruxa", "Feitiço", "Sereia", "Cavalo",
+      "Jardim", "Flor", "Estrela", "Brilho", "Encanto", "Ponte", "Lago",
+      "Floresta", "Pérola", "Diamante", "Rosa", "Borboleta", "Sonho",
+      "Festa", "Valsa", "Conto", "Dama", "Cisne", "Abóbora", "Duende", "Arco-íris"
     ]
   },
   {
@@ -28,7 +33,11 @@ const TEMAS = [
     palavras: [
       "Herói", "Capa", "Máscara", "Poder", "Escudo", "Voar", "Força",
       "Coragem", "Amigo", "Salvar", "Raio", "Laser", "Robô", "Cidade",
-      "Missão", "Vilão", "Equipe", "Foguete", "Uniforme", "Resgate"
+      "Missão", "Vilão", "Equipe", "Foguete", "Uniforme", "Resgate",
+      "Batalha", "Vitória", "Energia", "Trovão", "Gelo", "Fogo", "Vento",
+      "Planeta", "Galáxia", "Nave", "Esconderijo", "Aliado", "Proteger",
+      "Ajuda", "Bravura", "Sinal", "Alerta", "Cinto", "Luvas", "Botas",
+      "Agilidade", "Velocidade", "Super", "Justiça", "Aventura", "Ímã", "Cometa"
     ]
   },
   {
@@ -40,7 +49,12 @@ const TEMAS = [
     palavras: [
       "Receita", "Panela", "Forno", "Tempero", "Alho", "Cebola", "Bolo",
       "Feijoada", "Arroz", "Massa", "Colher", "Canela", "Manjericão",
-      "Pudim", "Brigadeiro", "Farofa", "Lasanha", "Azeite", "Orégano", "Café"
+      "Pudim", "Brigadeiro", "Farofa", "Lasanha", "Azeite", "Orégano", "Café",
+      "Feijão", "Frango", "Salada", "Tomate", "Batata", "Cenoura", "Mandioca",
+      "Cuscuz", "Tapioca", "Coxinha", "Pastel", "Torta", "Quindim", "Cocada",
+      "Paçoca", "Canjica", "Pamonha", "Moqueca", "Strogonoff", "Sopa",
+      "Assado", "Fermento", "Farinha", "Açúcar", "Manteiga", "Leite",
+      "Ovos", "Batedeira", "Avental", "Travessa", "Cheiro-verde", "Louro", "Cominho"
     ]
   },
   {
@@ -52,7 +66,11 @@ const TEMAS = [
     palavras: [
       "Ioga", "Banho", "Creme", "Sono", "Chá", "Meditar", "Caminhada",
       "Massagem", "Leitura", "Sorriso", "Paz", "Hidratar", "Alongar",
-      "Descanso", "Perfume", "Música", "Terapia", "Gratidão", "Água", "Spa"
+      "Descanso", "Perfume", "Música", "Terapia", "Gratidão", "Água", "Spa",
+      "Respirar", "Silêncio", "Pilates", "Dança", "Natureza", "Sol", "Praia",
+      "Esmalte", "Unhas", "Cabelo", "Máscara", "Pele", "Sabonete", "Vela",
+      "Aroma", "Oração", "Fé", "Amizade", "Equilíbrio", "Calma", "Alegria",
+      "Bem-estar", "Saúde", "Frutas", "Diário", "Passeio", "Viagem", "Cochilo", "Abraço"
     ]
   },
   {
@@ -64,7 +82,12 @@ const TEMAS = [
     palavras: [
       "Novela", "Capítulo", "Galã", "Mocinha", "Vilã", "Romance",
       "Casamento", "Segredo", "Herança", "Avó", "Netos", "Família",
-      "Domingo", "Almoço", "Abraço", "Saudade", "Beijo", "Final", "Ciúme", "Amor"
+      "Domingo", "Almoço", "Abraço", "Saudade", "Beijo", "Final", "Ciúme", "Amor",
+      "Mistério", "Traição", "Paixão", "Noivado", "Vingança", "Fazenda",
+      "Mansão", "Gêmeos", "Destino", "Reencontro", "Lágrimas", "Elenco",
+      "Cena", "Trama", "Sogra", "Cunhada", "Primos", "Tios", "Afilhado",
+      "Madrinha", "Padrinho", "Irmãos", "Filhos", "Mãe", "Pai", "Lar",
+      "Reunião", "Aniversário", "Bolo", "Fotos", "Memória", "Carinho", "União"
     ]
   },
   {
@@ -76,7 +99,12 @@ const TEMAS = [
     palavras: [
       "Orquídea", "Rosa", "Suculenta", "Vaso", "Regador", "Semente",
       "Terra", "Flor", "Girassol", "Lavanda", "Horta", "Folha", "Muda",
-      "Adubo", "Cacto", "Samambaia", "Margarida", "Jardim", "Raiz", "Broto"
+      "Adubo", "Cacto", "Samambaia", "Margarida", "Jardim", "Raiz", "Broto",
+      "Violeta", "Tulipa", "Lírio", "Hortênsia", "Begônia", "Azaleia",
+      "Jasmim", "Hibisco", "Bromélia", "Alecrim", "Hortelã", "Manjericão",
+      "Salsinha", "Cebolinha", "Babosa", "Árvore", "Galho", "Pétala",
+      "Pólen", "Abelha", "Joaninha", "Minhoca", "Tesoura", "Pá", "Mangueira",
+      "Grama", "Canteiro", "Estufa", "Colheita", "Primavera", "Chuva", "Orvalho"
     ]
   }
 ];

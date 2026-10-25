@@ -106,9 +106,33 @@ function tentarColocar(grade, chave, direcoes) {
   return null;
 }
 
+// Lembra as palavras das últimas partidas de cada tema (no próprio aparelho),
+// para que a próxima partida traga palavras diferentes.
+function lerUsadas(tema) {
+  try {
+    return JSON.parse(localStorage.getItem(`cacapalavras-usadas-${tema.id}`)) || [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function salvarUsadas(tema, palavras) {
+  // Guarda só o suficiente para não esgotar a lista do tema
+  const limite = Math.max(0, tema.palavras.length - 12);
+  const usadas = [...palavras.map((p) => p.texto), ...lerUsadas(tema)].slice(0, limite);
+  try {
+    localStorage.setItem(`cacapalavras-usadas-${tema.id}`, JSON.stringify(usadas));
+  } catch (e) {
+    // sem memória no aparelho: o sorteio continua funcionando normalmente
+  }
+}
+
 function gerarJogo(tema, nivel) {
   const { tamanho, qtdPalavras, direcoes } = NIVEIS[nivel];
-  const candidatas = embaralhar(tema.palavras).filter((p) => normalizar(p).length <= tamanho);
+  const usadas = new Set(lerUsadas(tema));
+  const cabem = embaralhar(tema.palavras).filter((p) => normalizar(p).length <= tamanho);
+  // Primeiro as palavras que não apareceram nas últimas partidas
+  const candidatas = [...cabem.filter((p) => !usadas.has(p)), ...cabem.filter((p) => usadas.has(p))];
 
   const grade = Array.from({ length: tamanho }, () => Array(tamanho).fill(""));
   const palavras = [];
@@ -126,6 +150,7 @@ function gerarJogo(tema, nivel) {
     }
   }
   palavras.sort((a, b) => a.texto.localeCompare(b.texto, "pt-BR"));
+  salvarUsadas(tema, palavras);
   return { grade, palavras };
 }
 
