@@ -91,10 +91,7 @@ button { font: inherit; cursor: pointer; }
   background: var(--roxo); border-color: var(--dourado-claro); color: #fff;
 }
 
-.titulo-grupo {
-  font-family: var(--fonte-titulo); font-size: 1.15rem;
-  margin: 26px 0 10px; color: var(--roxo);
-}
+#lista-temas { margin-top: 22px; }
 
 .grade-temas {
   display: grid;
