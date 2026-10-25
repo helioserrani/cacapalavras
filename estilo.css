@@ -53,7 +53,7 @@ button { font: inherit; cursor: pointer; }
   display: block;
   width: 100%;
   height: auto;
-  margin: 12px auto 6px;
+  margin: 12px auto 24px;
   border-radius: 22px;
   border: 2px solid var(--dourado-claro);
   box-shadow: 0 12px 30px rgba(74, 31, 125, .22);
