@@ -12,7 +12,6 @@ const TEMAS = [
     id: "princesas",
     nome: "Princesas",
     emoji: "👑",
-    publico: "Crianças",
     cor: "#ec4899",
     palavras: [
       "Princesa", "Castelo", "Coroa", "Vestido", "Fada", "Príncipe",
@@ -28,7 +27,6 @@ const TEMAS = [
     id: "herois",
     nome: "Heróis",
     emoji: "🦸",
-    publico: "Crianças",
     cor: "#2563eb",
     palavras: [
       "Herói", "Capa", "Máscara", "Poder", "Escudo", "Voar", "Força",
@@ -44,7 +42,6 @@ const TEMAS = [
     id: "animais",
     nome: "Animais",
     emoji: "🐶",
-    publico: "Crianças",
     cor: "#f59e0b",
     palavras: [
       "Cachorro", "Gato", "Coelho", "Leão", "Tigre", "Macaco", "Girafa",
@@ -61,7 +58,6 @@ const TEMAS = [
     id: "fundo-do-mar",
     nome: "Fundo do Mar",
     emoji: "🐠",
-    publico: "Crianças",
     cor: "#0891b2",
     palavras: [
       "Peixe", "Baleia", "Golfinho", "Tubarão", "Polvo", "Lula", "Sereia",
@@ -78,7 +74,6 @@ const TEMAS = [
     id: "culinaria",
     nome: "Culinária",
     emoji: "🍲",
-    publico: "Adultos",
     cor: "#ea580c",
     palavras: [
       "Receita", "Panela", "Forno", "Tempero", "Alho", "Cebola", "Bolo",
@@ -95,7 +90,6 @@ const TEMAS = [
     id: "autocuidado",
     nome: "Autocuidado",
     emoji: "🌸",
-    publico: "Adultos",
     cor: "#a855f7",
     palavras: [
       "Ioga", "Banho", "Creme", "Sono", "Chá", "Meditar", "Caminhada",
@@ -111,7 +105,6 @@ const TEMAS = [
     id: "novelas",
     nome: "Novelas e Família",
     emoji: "📺",
-    publico: "Adultos",
     cor: "#dc2626",
     palavras: [
       "Novela", "Capítulo", "Galã", "Mocinha", "Vilã", "Romance",
@@ -128,7 +121,6 @@ const TEMAS = [
     id: "jardim",
     nome: "Jardim e Plantas",
     emoji: "🌻",
-    publico: "Adultos",
     cor: "#16a34a",
     palavras: [
       "Orquídea", "Rosa", "Suculenta", "Vaso", "Regador", "Semente",

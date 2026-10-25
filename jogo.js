@@ -45,27 +45,18 @@ function embaralhar(lista) {
 function montarTelaTemas() {
   const lista = el("lista-temas");
   lista.innerHTML = "";
-  const grupos = [...new Set(TEMAS.map((t) => t.publico))];
-
-  grupos.forEach((publico) => {
-    const titulo = document.createElement("h2");
-    titulo.className = "titulo-grupo";
-    titulo.textContent = publico === "Crianças" ? "🧒 Para crianças" : "☕ Para adultos";
-    lista.appendChild(titulo);
-
-    const grade = document.createElement("div");
-    grade.className = "grade-temas";
-    TEMAS.filter((t) => t.publico === publico).forEach((tema) => {
-      const botao = document.createElement("button");
-      botao.type = "button";
-      botao.className = "cartao-tema";
-      botao.style.setProperty("--cor-tema", tema.cor);
-      botao.innerHTML = `<span class="emoji">${tema.emoji}</span><span class="nome">${tema.nome}</span>`;
-      botao.addEventListener("click", () => iniciarJogo(tema));
-      grade.appendChild(botao);
-    });
-    lista.appendChild(grade);
+  const grade = document.createElement("div");
+  grade.className = "grade-temas";
+  TEMAS.forEach((tema) => {
+    const botao = document.createElement("button");
+    botao.type = "button";
+    botao.className = "cartao-tema";
+    botao.style.setProperty("--cor-tema", tema.cor);
+    botao.innerHTML = `<span class="emoji">${tema.emoji}</span><span class="nome">${tema.nome}</span>`;
+    botao.addEventListener("click", () => iniciarJogo(tema));
+    grade.appendChild(botao);
   });
+  lista.appendChild(grade);
 
   el("botoes-dificuldade").querySelectorAll("button").forEach((b) => {
     b.addEventListener("click", () => {
