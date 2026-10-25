@@ -41,6 +41,40 @@ const TEMAS = [
     ]
   },
   {
+    id: "animais",
+    nome: "Animais",
+    emoji: "🐶",
+    publico: "Crianças",
+    cor: "#f59e0b",
+    palavras: [
+      "Cachorro", "Gato", "Coelho", "Leão", "Tigre", "Macaco", "Girafa",
+      "Elefante", "Zebra", "Urso", "Panda", "Raposa", "Lobo", "Coruja",
+      "Papagaio", "Arara", "Tucano", "Pato", "Galinha", "Pintinho", "Vaca",
+      "Cavalo", "Porco", "Ovelha", "Cabra", "Burro", "Sapo", "Tartaruga",
+      "Jacaré", "Cobra", "Hipopótamo", "Canguru", "Coala", "Esquilo",
+      "Hamster", "Rato", "Borboleta", "Abelha", "Joaninha", "Formiga",
+      "Pinguim", "Camelo", "Onça", "Capivara", "Preguiça", "Tamanduá",
+      "Peixe", "Lagarta", "Pônei", "Gatinho", "Filhote"
+    ]
+  },
+  {
+    id: "fundo-do-mar",
+    nome: "Fundo do Mar",
+    emoji: "🐠",
+    publico: "Crianças",
+    cor: "#0891b2",
+    palavras: [
+      "Peixe", "Baleia", "Golfinho", "Tubarão", "Polvo", "Lula", "Sereia",
+      "Concha", "Estrela", "Moreia", "Água-viva", "Caranguejo",
+      "Siri", "Lagosta", "Camarão", "Tartaruga", "Foca", "Morsa", "Pinguim",
+      "Coral", "Alga", "Areia", "Onda", "Oceano", "Mar", "Praia", "Ilha",
+      "Pérola", "Ostra", "Tesouro", "Navio", "Âncora", "Barco", "Farol",
+      "Submarino", "Mergulho", "Bolhas", "Nadadeira", "Escama", "Recife",
+      "Maré", "Gaivota", "Pirata", "Arraia", "Peixe-palhaço", "Mergulhador",
+      "Snorkel", "Rede", "Azul", "Espuma", "Baiacu"
+    ]
+  },
+  {
     id: "culinaria",
     nome: "Culinária",
     emoji: "🍲",
