@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#7c3aed">
+  <title>Caça-Palavras</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔎</text></svg>">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <!-- Tela 1: escolha do tema -->
+  <main id="tela-temas" class="tela">
+    <header class="topo">
+      <h1>🔎 Caça-Palavras</h1>
+      <p>Escolha um tema para começar</p>
+    </header>
+
+    <section class="dificuldade" aria-label="Dificuldade">
+      <span>Dificuldade:</span>
+      <div class="botoes-dificuldade" id="botoes-dificuldade">
+        <button type="button" data-nivel="facil" class="ativo">Fácil</button>
+        <button type="button" data-nivel="medio">Médio</button>
+        <button type="button" data-nivel="dificil">Difícil</button>
+      </div>
+    </section>
+
+    <div id="lista-temas"></div>
+  </main>
+
+  <!-- Tela 2: o jogo -->
+  <main id="tela-jogo" class="tela escondida">
+    <header class="barra-jogo">
+      <button type="button" id="voltar" class="botao-secundario">← Temas</button>
+      <h2 id="titulo-tema"></h2>
+      <span id="cronometro" aria-label="Tempo">00:00</span>
+    </header>
+
+    <p class="dica" id="dica">Arraste o dedo (ou o mouse) sobre as letras da palavra. Também dá para tocar na primeira e na última letra.</p>
+
+    <div id="tabuleiro" aria-label="Grade de letras"></div>
+
+    <section class="painel-palavras">
+      <h3>Palavras <span id="contador"></span></h3>
+      <ul id="lista-palavras"></ul>
+    </section>
+
+    <div class="acoes">
+      <button type="button" id="novo-jogo" class="botao-principal">🔄 Novo jogo</button>
+    </div>
+  </main>
+
+  <!-- Mensagem de vitória -->
+  <div id="vitoria" class="vitoria escondida" role="dialog" aria-modal="true" aria-labelledby="vitoria-titulo">
+    <div class="caixa-vitoria">
+      <div class="emoji-grande">🎉</div>
+      <h2 id="vitoria-titulo">Parabéns!</h2>
+      <p id="vitoria-texto"></p>
+      <button type="button" id="jogar-de-novo" class="botao-principal">Jogar de novo</button>
+      <button type="button" id="trocar-tema" class="botao-secundario">Escolher outro tema</button>
+    </div>
+  </div>
+
+  <script src="temas.js"></script>
+  <script src="jogo.js"></script>
+</body>
+</html>
